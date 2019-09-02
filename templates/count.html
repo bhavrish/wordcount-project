@@ -1,0 +1,16 @@
+<h1>Home</h1>
+
+<h2> There are {{ totalcount }} words in your text </h2>
+
+<h2> Your text: </h2>
+{{fulltext}}
+
+<h2> Words that repeat: </h2>
+{% for keys, values in sortedWords %}
+{{ keys }}: {{ values }}
+<br/>
+{% endfor %}
+
+<br/>
+<br/>
+<a href="{% url 'home' %}"> Start Again! </a>
